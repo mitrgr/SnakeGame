@@ -4,7 +4,7 @@
 
 Bord::Bord()
 {
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 }
 
 void Bord::Update(Keyboard & K, bool & Gameover, bool& newOBS)
