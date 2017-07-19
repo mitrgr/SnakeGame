@@ -13,7 +13,7 @@ float FrameTime::Mark()
 	last = steady_clock::now();
 	const duration<float> dt = last - old;
 
-	return dt.count;
+	return dt.count();
 }
 
 
