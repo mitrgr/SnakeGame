@@ -24,6 +24,8 @@
 #include "Mouse.h"
 #include "Graphics.h"
 #include "Bord.h"
+#include "FrameTime.h"
+
 
 class Game
 {
@@ -44,6 +46,7 @@ private:
 	/********************************/
 	/*  User Variables              */
 	Bord bord;
+	FrameTime ft;
 	bool gameIsStarted=false;
 	int snakeSpeed = 3;
 	int SnakeSpeedCount = 0;
