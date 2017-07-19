@@ -38,12 +38,14 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	const float dt = ft.Mark();
+
 	if (!gameover) {
 		if (gameIsStarted) {
 
-			SnakeSpeedCount++;
-			obscount++;
-			if (snakeSpeed == SnakeSpeedCount) {
+			SnakeSpeedCount+=dt;
+			obscount+=dt;
+			if (snakeSpeed <= SnakeSpeedCount) {
 				if (obscount >= timeToObs) {
 					newobs = true;
 					obscount = 0;
